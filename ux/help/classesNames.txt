@@ -1,0 +1,28 @@
+classes:
+habitacao
+	apoios
+	arrendar-casa
+		en-eletrica
+		agua
+	vender-casa
+		tele
+	comprar-casa
+	gerir-casa
+	vender-casa
+seg-social-main
+	seg-social
+		atend
+	familia
+		criancas
+		adopcao
+		maternidade
+	emprego
+		conta
+	reforma
+	atendimento
+saude
+transportes
+	viatura
+		abater
+	trans-publicos
+		atend

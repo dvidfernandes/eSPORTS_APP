@@ -1,0 +1,139 @@
+.btn {
+    padding: 10px 30px;
+    font-weight: 500;
+    @include text-shadow(none);
+    @include box-shadow(none);
+    outline: none !important;
+    @include border-radius(0);
+    @include transition(all 0.15s ease-out);
+}
+
+.btn-icon {
+    position: relative;
+    padding-left: 44px;
+    padding-right: 14px;
+    .icon {
+        position: absolute;
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        background-color: $primary-color;
+        @include border-radius(50%);
+        text-align: center;
+        color: #fff;
+        top: 4px;
+        left: 4px;
+    }
+
+    &:hover .icon {
+        background-color: $btn-primary-hover-background-color;
+    }
+}
+
+// btn default
+.btn-primary {
+    background-color: $btn-primary-background-color;
+    color: $btn-primary-text-color;
+    border-color: $btn-primary-border-color;
+}
+
+.btn-primary.active, .btn-primary:active, .btn-primary:hover, .open>.dropdown-toggle.btn-primary {
+    color: $btn-primary-hover-text-color;
+    border-color: $btn-primary-hover-border-color;
+    background-color: $btn-primary-hover-background-color;
+}
+.btn-primary.focus, .btn-primary:focus {
+    background-color: tint($btn-primary-background-color,20%);
+    border-color: tint($btn-primary-background-color,20%);
+    color: #fff;
+}
+
+.btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary.focus:active, .btn-primary:active:focus, .btn-primary:active:hover, .open > .dropdown-toggle.btn-primary.focus, .open > .dropdown-toggle.btn-primary:focus, .open > .dropdown-toggle.btn-primary:hover {
+    color: $btn-primary-hover-text-color;
+    border-color: $btn-primary-hover-border-color;
+    background-color: $btn-primary-hover-background-color;
+    outline: none;
+}
+
+// btn-primary
+.btn-default {
+    background-color: $btn-primary-text-color;
+    color: $btn-primary-background-color;
+    border-color: $btn-primary-border-color;
+}
+
+.btn-default.active, .btn-default:active, .btn-default:hover, .open>.dropdown-toggle.btn-default {
+    color: $btn-primary-hover-text-color;
+    border-color: $btn-primary-hover-border-color;
+    background-color: $btn-primary-hover-background-color;
+}
+.btn-default.focus, .btn-default:focus {
+    background-color: tint($btn-primary-background-color,20%);
+    border-color: tint($btn-primary-background-color,20%);
+    color: #fff;
+}
+
+.btn-default.active.focus,
+.btn-default.active:focus,
+.btn-default.active:hover,
+.btn-default.focus:active,
+.btn-default:active:focus,
+.btn-default:active:hover,
+.open > .dropdown-toggle.btn-default.focus,
+.open > .dropdown-toggle.btn-default:focus,
+.open > .dropdown-toggle.btn-default:hover {
+    color: $btn-primary-hover-text-color;
+    border-color: $btn-primary-hover-border-color;
+    background-color: $btn-primary-hover-background-color;
+    outline: none;
+}
+
+.btn.btn-rounded {
+    @include border-radius(21px);
+}
+
+.btn-profile {
+    background-color: #ebebeb;
+    height: 48px;
+    line-height: 48px;
+    @include border-radius(24px);
+    padding: 2px;
+
+
+    .icon {
+        display: inline-block;
+        height: 44px;
+        width: 44px;
+        text-align: center;
+        position: relative;
+        color: #707070;
+        float: left;
+        margin-right: 5px;
+
+        .fa { font-size: 16px; }
+
+        .noti {
+            position: absolute;
+            background-color: #db3036;
+            width: 18px;
+            height: 18px;
+            line-height: 18px;
+            @include border-radius(9px);
+            color: #fff;
+            top: 6px;
+            left: 20px;
+            font-size: 11px;
+        }
+    }
+
+    .pic {
+        width: 44px;
+        height: 44px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        @include border-radius(24px);
+        float: left;
+    }
+}

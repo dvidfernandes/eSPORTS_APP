@@ -1,0 +1,69 @@
+@@include('header.html')
+        @@include('header-nav.html',{"logged":false,"isResults":false})
+        @@include('pesquisa-home.html')
+        <div class="wrapper">
+            @@include('noticia-destaque.html')
+            @@include('slider-noticias.html')
+            @@include('about.html')
+        </div>
+@@include('chatbot.html')
+@@include('footer.html')
+<script type="text/javascript">
+	var intro = new Audio('./sounds/intro1.m4a');
+	var intro2 = new Audio('./sounds/intro2.m4a');
+	var intro3 = new Audio('./sounds/intro3.m4a');
+	var pesq1 = new Audio('./sounds/pesq1.m4a');
+	var pesq2 = new Audio('./sounds/pesq2.m4a');
+	var pesq3 = new Audio('./sounds/pesq3.m4a');
+	var pesq4 = new Audio('./sounds/pesq4.m4a');
+  var pesq6 = new Audio('./sounds/pesq6.m4a');
+	var autenticar1 = new Audio('./sounds/autenticar1.m4a');
+	var autenticar2 = new Audio('./sounds/autenticar2.m4a');
+	var pesq2B = false;
+
+	var QueryString = function () {
+          // This function is anonymous, is executed immediately and 
+          // the return value is assigned to QueryString!
+          var query_string = {};
+          var query = window.location.search.substring(1);
+          var vars = query.split("&");
+          for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+                // If first entry with this name
+            if (typeof query_string[pair[0]] === "undefined") {
+              query_string[pair[0]] = decodeURIComponent(pair[1]);
+                // If second entry with this name
+            } else if (typeof query_string[pair[0]] === "string") {
+              var arr = [ query_string[pair[0]],decodeURIComponent(pair[1]) ];
+              query_string[pair[0]] = arr;
+                // If third or later entry with this name
+            } else {
+              query_string[pair[0]].push(decodeURIComponent(pair[1]));
+            }
+          } 
+          return query_string;
+        }();
+
+        pesq3.onended = function(){
+          pesq4.play();
+        };
+        pesq2.onended = function(){
+          pesq3.play();
+        };
+        intro3.onended = function(){
+          pesq1.play();
+        };
+        intro2.onended = function(){
+          intro3.play();
+        };
+        intro.onended = function(){
+          intro2.play();
+        };
+
+        if(QueryString.sound){
+            autenticar1.play();
+        }else{
+			     intro.play();
+        }
+
+</script>

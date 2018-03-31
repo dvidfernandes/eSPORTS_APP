@@ -1,0 +1,18 @@
+.breadcrumb-container {
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+.breadcrumb {
+    background-color: transparent;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 13px;
+
+    a { color: #000; text-decoration: underline;}
+
+    & > li + li:before {
+        content: '>';
+    }
+}

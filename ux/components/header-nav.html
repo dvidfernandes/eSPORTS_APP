@@ -1,0 +1,113 @@
+<div class="container-fluid np" id="header" style="z-index: 9999">
+    <div class="wide" style="z-index: 999">
+        <div class="container-fluid np" style="width: 80%">
+            <div class="row">
+                <div class="col-xs-12 nsp">
+                    <div class="row">
+                        <div class="col-xs-12 common">
+                            <div class="row pt20 pb20" >
+                                <div class="col-xs-6">
+                                <a href="#">
+                                    <img id="portal_cidadao_img" src="images/logo_portal_cidadao_high.png" height="60" />
+                                </a>
+                                </div>
+                                @@if (!logged){
+                                    <div class="col-xs-6 pt10">
+                                        <a href="/index_authenticated.html" class="btn btn-default btn-rounded btn-icon pull-right">
+                                            <i class="fa fa-user-o icon" aria-hidden="true"></i>
+                                            <strong>Autenticar-me</strong>
+                                        </a>
+                                        <!--<ul class="langs-list pull-right mt15">
+                                            <li class="active"><a href="#"><img height="12" src="images/pt_flag.png" alt=""></a></li>
+                                            <li><a href="#"><img height="12" src="images/uk_flag.png" alt=""></a></li>
+                                            <li><a href="#"><img height="12" src="images/spain_flag.png" alt=""></a></li>
+                                        </ul>-->
+                                    </div>
+                                }
+
+                                @@if (logged){
+                                    <div class="col-xs-6 pt10">
+                                        <div class="pull-right pt15">
+                                            <span class="pull-left mr5">Olá, </span><a href="#"><strong class="pull-left">Camila Tomás</strong><i class="fa fa-sort-desc pull-left ml5" aria-hidden="true"></i></a>
+                                        </div>
+                                        <a href="#" class="btn-profile pull-right mr15">
+                                            <div class="icon">
+                                                <i class="fa fa-bell" aria-hidden="true"></i>
+                                                <span class="noti">3</span>
+                                            </div>
+                                            <div class="pic" style="background-image:url(images/profile.png)"></div>
+                                        </a>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @@if (!isResults){
+    <div class="container-fluid np search-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 search" id="header-search">
+                    <div class="row pb15 pt15">
+                        <div class="col-xs-2">
+                            <h3 class="mt10"><strong>Pesquisa</strong></h3>
+                        </div>
+                        <div class="col-xs-10">
+                            <div class="input-group rounded input-search input-search-wrapper">
+                                <div class="hint">Gravidez de risco</div>
+                                <span class="input-group-addon"><img src="images/search.png" height="20"></span>
+                                <input type="text" id="top-search" class="form-control rounded" placeholder="Faça a sua pergunta">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pb15" id="header-bubbles" style="display: none">
+                        <div class="col-xs-10 col-xs-offset-2 search-bubbles--container level0" id="search-bubbles-results"></div>
+                    </div>
+                    <div class="row" id="header-filters" style="display: none">
+                        <div class="col-xs-12 wrapper">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+    @@if (isResults){
+    <div class="container-fluid np search-container scroll-disabled">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 search" id="header-search">
+                    <div class="row pb15 pt15">
+                        <div class="col-xs-2">
+                            <h3 class="mt10"><strong>Pesquisa</strong></h3>
+                        </div>
+                        <div class="col-xs-10">
+                            <div class="input-group rounded input-search input-search-wrapper">
+                                <div class="hint">Gravidez de risco</div>
+                                <span class="input-group-addon"><img src="images/search.png" height="20"></span>
+                                <input type="text" id="top-search" class="form-control rounded" placeholder="Faça a sua pergunta">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row pb15" id="header-bubbles" style="display: none">
+                        <div class="col-xs-10 col-xs-offset-2 search-bubbles--container level0" id="search-bubbles-results"></div>
+                    </div>
+                    <div class="row" id="header-filters" style="display: none">
+                        <div class="col-xs-12 wrapper">
+                        </div>
+                    </div>
+                </div>
+                @@include('filters.html',{"show":true})
+            </div>
+        </div>
+    </div>
+    }
+
+
+</div>

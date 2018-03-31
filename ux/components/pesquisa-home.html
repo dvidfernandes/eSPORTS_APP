@@ -1,0 +1,90 @@
+<div class="container-fluid np" id="search-container">
+    <div class="container-fluid search-wrapper">
+        <div class="container">
+            <div class="row  search-container">
+                <div class="col-xs-12">
+                    <div class="row mt30">
+                        <div class="col-xs-12 tc">
+                            <h1 class="nm">Rápido. Simples. Direto.<br><strong>Como podemos ajudar?</strong></h1>
+                        </div>
+                    </div>
+                    <div class="row mt30 mb30" id="input-search-wrapper">
+                        <div class="col-xs-8 col-xs-offset-2">
+                            <div class="input-group rounded input-search input-search-wrapper">
+                                <span class="input-group-addon"><img src="images/search.png" height="20"></span>
+                                <div class="hint"></div>
+                                <input type="text" id="main-search" class="form-control rounded" placeholder="Faça a sua pergunta">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row tc">
+                        <div class="col-xs-11 search-bubbles--container level0" id="search-bubbles">
+                            <a href="#" class="search-bubble transportes">Transportes e veículos</a>
+                            <a href="#" class="search-bubble">Impostos e Contribuições</a>
+                            <a href="#" class="search-bubble habitacao">Habitação</a>
+                            <a href="#" class="search-bubble">Emprego</a>
+                            <a href="#" class="search-bubble">Justiça</a>
+                            <a href="#" class="search-bubble">Segurança e apoio Social</a>
+                            <a href="#" class="search-bubble saude">Saúde</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="h80">
+        <div class="container-fluid search-nav level1 search-bubbles--container" style="display: none;" id="search-bubbles-level-1">
+            <div class="container">
+                <div class="row pt20 pb20">
+                    <div class="col-xs-12 bubbles-placeholder hidden">
+                        <!--Habitacao-->
+                        <a href="#apoios" class="search-bubble habitacao apoios">Apoios e Incentivos</a>
+                        <a href="#arrendar-casa" class="search-bubble habitacao arrendar-casa">Arrendar Casa</a>
+                        <a href="#certidoes" class="search-bubble habitacao certidoes">Certidões</a>
+                        <a href="#servicos" class="search-bubble habitacao servicos">Serviços</a>
+                        <a href="#vender-casa" class="search-bubble habitacao vender-casa">Vender Casa</a>
+                        <a href="#comprar-casa" class="search-bubble habitacao comprar-casa">Comprar Casa</a>
+
+                        <!--Emprego-->
+                        <a href="#conta-outrem" class="search-bubble emprego conta-outrem">Conta de Outrem</a>
+                        <a href="#contra-propria" class="search-bubble emprego contra-propria">Conta Própria</a>
+
+                        <!--Seg Apoio Social-->
+                        <a href="#conta-outrem" class="search-bubble seg-social-main atendimento">Atendimento</a>
+                        <a href="#contra-propria" class="search-bubble seg-social-main criancas-jovens">Crianças e Jovens</a>
+                        <a href="#contra-propria" class="search-bubble seg-social-main adopcao">Adopção</a>
+                        <a href="#contra-propria" class="search-bubble seg-social-main maternidade">Maternidade e Paternidade</a>
+
+                        <a href="#seg-social" class="search-bubble seg-social-main seg-social">Segurança social</a>
+                        <a href="#familia" class="search-bubble seg-social-main familia">Família</a>
+                        <a href="#emprego" class="search-bubble seg-social-main emprego">Emprego</a>
+                        <a href="#reforma" class="search-bubble seg-social-main reforma">Reforma</a>
+
+                        <!--Transportes -->
+                        <a href="#atendimento" class="search-bubble transportes atendimento">Atendimento</a>
+                        <a href="#viatura" class="search-bubble transportes viatura">Viaturas Próprias</a>
+                        <a href="#trans-publicos" class="search-bubble transportes trans-publicos">Transportes públicos</a>
+                    </div>
+
+                    <div class="col-xs-12 np">
+                        <div class="owl-carousel">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container pt20 pb20" id="search-results">
+        <div class="row nm" style="display: none">
+            <div class="col-xs-12 np">
+                <div class="row search-results--loader tc">
+                    <img src="images/S3YnJBQ.gif" height="80" />
+                </div>
+                @@include('filters.html',{"show":false})
+                @@include('resultados.html')
+            </div>
+        </div>
+    </div>
+    <a href="#" class="read-more">Ver mais conteúdo <br><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+</div>

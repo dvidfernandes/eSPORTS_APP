@@ -1,0 +1,41 @@
+#footer {
+    margin-top: 60px;
+    .wrapper {background-color: #f8f8f8;}
+
+    .nav-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li { margin: 20px 0; padding: 0; }
+    }
+
+    .links-wrapper {
+
+
+
+        & > div {border-bottom: 1px solid #333;padding-bottom: 30px;}
+    }
+
+    .langs-select {
+        .select2-container--default .select2-selection--single { border-color: #111; border-width: 1px; @include border-radius(4px); }
+        .select2-container--default .select2-selection--single { background-color: transparent; }
+
+        .select2-container .select2-selection--single .select2-selection__rendered {}
+
+        .select2-container--default .select2-selection--single .select2-selection__arrow b { border-color: #111 transparent transparent; }
+    }
+}
+body > .select2-container--open.langs {
+
+    .select2-results__option {
+        padding: 10px 10px 10px 36px;
+        background-repeat: no-repeat;
+        background-size: auto 12px;
+        background-position: 13px 13px;
+    }
+
+    & [id*="-pt"] { background-image: url(../images/pt_flag.png); }
+    & [id*="-es"] { background-image: url(../images/spain_flag.png); }
+    & [id*="-en"] { background-image: url(../images/uk_flag.png); }
+}

@@ -1,0 +1,249 @@
+.alteracao-morada--stepper {
+
+    &.step1 > .completed {width: 0%;}
+    &.step2 > .completed {width: 33.3%;}
+    &.step3 > .completed {width: 66.6%;}
+    &.step4 > .completed {width: 100%;}
+
+    &.step1 > .current {width: 33.3%;}
+    &.step2 > .current {width: 66.6%;}
+    &.step3 > .current {width: 100%;}
+    &.step4 > .current {width: 100%;}
+
+    .progress-label > label { position: absolute; }
+
+    .progress-label > label:nth-child(1) { text-align: left; }
+    .progress-label > label:nth-child(2) { right: 42.3%; text-align: center; }
+    .progress-label > label:nth-child(3) { right: 0; text-align: right; }
+
+    .progress-label label.completed strong {color: $success-color;}
+
+}
+
+.alteracao-morada--steps {
+
+    .caixa-morada {
+        @include border-radius(10px);
+        border: 1px solid #aaa;
+        margin-left: 0;
+        margin-right: 0;
+        color: #444;
+        display: table;
+        width: 100%;
+
+        & > [class*="col-"] {float: none; display: table-cell; vertical-align: middle;}
+
+        h4 {
+            font-size: 24px;
+        }
+
+        & > div:first-of-type {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+    }
+
+    .map { padding-left: 0; padding-right: 0;}
+}
+
+.caixa-selected {
+    border: 2px solid #006a96 !important;
+    padding: 0 14px 0 14px !important;
+}
+
+.caixa {
+    @include border-radius(10px);
+    border: 1px solid #ddd;
+    color: #444;
+    display: table;
+    height: 145px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+
+    label {
+       font-size: 15px;
+    }
+}
+
+.choose-zone {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.validar-utilizador {
+    border-top: 1px solid #ddd;
+}
+
+
+.alteracao-morada--step .btn {
+    padding: 6px 19px;
+    }
+
+ .codPostal   {
+        display: inline;
+        white-space: nowrap;
+    }
+
+.codPostal4   {
+
+        width: 80px;
+    }
+
+.codPostal3   {
+        width: 65px;
+    }
+
+.form-control[disabled]{
+    background-color: #fff;
+    opacity: 0.5;
+}
+
+.disabled {
+    opacity: 0.5;
+}
+
+.input-selects input{
+        margin-top: 12px;
+}
+
+.h300 {
+    height: 300px;
+}
+
+.h250 {
+    height: 250px;
+}
+
+.mensagem-success {
+
+    & h3:nth-child(2) { color: #5cb85c; margin-bottom: 0px;};
+    & h3:nth-child(3) { margin-top: 0px;};
+
+}
+
+input[type=radio] {
+    display:none;
+}
+ input[type=radio] + label {
+    padding-left: 28px;
+    position: relative;
+ }
+ input[type=radio] + label:before {
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    border: 1px solid $primary-color;
+ }
+ input[type=radio] + label:after {
+    width: 14px;
+    height: 14px;
+    top: 3px;
+    left: 3px;
+    border: 1px solid #fff;
+ }
+
+input[type=radio] + label:before, input[type=radio] + label:after {
+    background-color: #fff;
+    content: '';
+    display: inline-block;
+    position: absolute;
+    @include border-radius(50%)
+}
+
+
+input[type=radio]:checked + label:after {
+    background-color: $primary-color;
+}
+
+.alteracao-morada strong{
+    color: $primary-color;
+}
+
+.successButton{
+    display: inline-block;
+    position: absolute;
+    @include border-radius(50%);
+    width: 25px;
+    height: 25px;
+    left: 16px;
+    border: 1px solid #3bba53;
+    background-color: #3bba53;
+}
+
+.successButton:after{
+    content: "";
+    background-image: url(../images/correct_white.png);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: auto 10px;
+    top: 7px;
+    height: 14px;
+    width: 16px;
+    left: 4px;
+}
+
+.code4Validated label{
+    padding-left: 30px;
+    padding-top: 5px;
+}
+
+.addBtn{
+    display: inline-block;
+    position: absolute;
+    @include border-radius(50%);
+    width: 25px;
+    height: 25px;
+    left: 16px;
+    border: 1px solid $primary-color;
+}
+
+.addBtn:after{
+    content: "";
+    background-image: url(../images/add.png);
+    background-size: auto 13px;
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 5px;
+    height: 20px;
+    width: 20px;
+    left: 5px;
+}
+
+.form-group strong{
+    color: #000;
+}
+
+.step3 label{
+    padding-left: 30px;
+    padding-top: 5px;
+}
+
+.img-sucesso-cc{
+    display: inline-block;
+    position: absolute;
+    @include border-radius(50%);
+    width: 40px;
+    height: 40px;
+    left: -40px;
+    border: 1px solid #3bba53;
+    background-color: #3bba53;
+    top: 13px;
+}
+
+
+.img-sucesso-cc:after{
+    content: "";
+    background-image: url(../images/correct_white.png);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: auto 18px;
+    top: 10px;
+    height: 35px;
+    width: 42px;
+    left: 6px;
+}
+
+.mensagem-success{
+    margin-left: 53px;
+}

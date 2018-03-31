@@ -1,0 +1,277 @@
+.form-group {
+    label {
+        font-weight: 500;
+        color: #444;
+    }
+
+    &.is-focused {
+        label { color: $primary-color; }
+
+        .form-control {color:$primary-color;}
+    }
+}
+
+.form-control, input[type="text"] {
+    border-color: $primary-color;
+    @include border-radius(0);
+    @include box-shadow(none);
+    font-size: 22px;
+    font-weight: 500;
+    color: $primary-color;
+
+    &:focus {
+        @include box-shadow(none);
+        border-color: shade($primary-color, 10%);
+    }
+
+    border-width: 0 0 1px 0;
+    &.xs { width: 80px; }
+
+    &.rounded {
+        @include border-radius(28px);
+    }
+
+    @include input-placeholder {
+        color: #ddd;
+        font-weight: 300;
+    }
+}
+
+.input-search .form-control {
+    height: auto;
+    padding: 14px 12px;
+    @include border-radius(0);
+    border-width: 1px;
+    font-size: 16px;
+
+
+}
+
+
+.input-group-addon { background-color: transparent; border-color: #707070; padding:0 7px 0 16px; font-size: 24px; line-height: 20px; color: $primary-color; }
+.input-group-addon:first-child { border-right: none; @include border-radius(0); }
+
+.input-group .form-control { border-left: none; }
+.input-group.rounded .input-group-addon {@include border-radius(28px 0 0 28px);}
+.input-group.is-focused .input-group-addon { border-color: shade($primary-color, 10%); }
+.input-group.input-search .form-control {
+    border-color: #707070;
+    color: #555;
+
+    @include input-placeholder {
+        color: #707070;
+    }
+}
+.input-group.input-search.is-focused .form-control,
+.input-group.input-search.is-focused .input-group-addon {border-color: #555;}
+.input-search.input-search-wrapper {
+    position: relative;
+
+    .hint {
+        padding: 14px 12px;
+        font-size: 16px;
+        position: absolute;
+        line-height: 23px;
+        color: #aaa;
+        display: none;
+    }
+
+    .form-control {background-color: transparent;}
+}
+
+.label {
+    padding: 3px 10px;
+    @include border-radius(8px);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 9px;
+
+    &.fat {
+        padding: 5px 14px;
+        @include border-radius(13px);
+        font-weight: 700;
+    }
+}
+
+.label-default {background-color: #aaa; }
+
+.search-nav {
+    &.level1 { background-color: tint($primary-color, 90%); }
+    &.level2 { background-color: tint($primary-color, 95%); }
+
+    &.level1 .owl-next {
+        background: -moz-linear-gradient(left,  rgba(tint($primary-color, 90%),0) 0%, rgba(tint($primary-color, 90%),1) 10%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left,  rgba(tint($primary-color, 90%),0) 0%,rgba(tint($primary-color, 90%),1) 10%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right,  rgba(tint($primary-color, 90%),0) 0%,rgba(tint($primary-color, 90%),1) 10%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 */
+    }
+
+    &.level2 .owl-next {
+        background: -moz-linear-gradient(left,  rgba(tint($primary-color, 95%),0) 0%, rgba(tint($primary-color, 95%),1) 10%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left,  rgba(tint($primary-color, 95%),0) 0%,rgba(tint($primary-color, 95%),1) 10%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right,  rgba(tint($primary-color, 95%),0) 0%,rgba(tint($primary-color, 95%),1) 10%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 */
+    }
+
+    &.level1 .owl-prev {
+        background: -moz-linear-gradient(left,  rgba(tint($primary-color, 90%),1) 90%, rgba(tint($primary-color, 90%),0) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left,  rgba(tint($primary-color, 90%),1) 90%,rgba(tint($primary-color, 90%),0) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right,  rgba(tint($primary-color, 90%),1) 90%,rgba(tint($primary-color, 90%),0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 */
+    }
+
+    &.level2 .owl-prev {
+        background: -moz-linear-gradient(left,  rgba(tint($primary-color, 95%),1) 90%, rgba(tint($primary-color, 95%),0) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left,  rgba(tint($primary-color, 95%),1) 90%,rgba(tint($primary-color, 95%),0) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right,  rgba(tint($primary-color, 95%),1) 90%,rgba(tint($primary-color, 95%),0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 */
+    }
+}
+
+.search-bubbles--container.level0 .search-bubble {
+    margin: 0 1px 6px 1px;
+}
+
+.search-filter {
+    padding: 0 10px 0 34px;
+    @include inline-block();
+    font-size: 100%;
+    height: 38px;
+    line-height: 36px;
+    @include border-radius(20px);
+    font-weight: 300;
+    border-color: #ccc;
+    border-style: solid;
+    border-width: 1px;
+    @include transition(all 0.25s ease-out);
+    background-color: #fff;
+    color: #888;
+    min-width: 180px;
+    margin: 10px 3px;
+    position: relative;
+
+    &:before {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 8px;
+        left: 8px;
+        content: '';
+        background-color: #888;
+        @include border-radius(10px);
+        background-image: url("../images/correct_white.png");
+        background-position: center center;
+        background-size: auto 7px;
+        background-repeat: no-repeat;
+    }
+
+    .counter {
+        padding: 2px 8px;
+        float: right;
+        padding: 4px 10px;
+        margin-top: 10px;
+        @include border-radius(20px);
+    }
+
+    &:hover {
+        color: #333;
+        border-color: #555;
+    }
+}
+
+.search-bubble {
+    padding: 0 14px;
+    @include inline-block();
+    font-size: 100%;
+    height: 40px;
+    line-height: 38px;
+    @include border-radius(20px);
+    font-weight: 400;
+    border-color: $primary-color;
+    border-style: solid;
+    border-width: 1px;
+    @include transition(all 0.25s ease-out);
+    background-color: #fff;
+    font-size: 13px;
+
+
+    &:hover {
+        background-color: $primary-color;
+        border-color: $primary-color;
+        color: #fff;
+    }
+
+    &:focus { color: $primary-color; }
+
+    &--disabled {
+        cursor: default;
+        @include transform(scale(0.98));
+        @include opacity(0.2);
+        display: none;
+
+        &:hover { background-color: #fff; color: $primary-color; border-color: $primary-color; }
+    }
+
+    &--enabled {
+
+    }
+
+    &--active, &--active:focus {
+        background-color: shade($primary-color, 5%);
+        border-color: shade($primary-color, 5%);
+        color: #fff;
+
+        &:hover {
+            background-color: shade($primary-color, 50%);
+            border-color: shade($primary-color, 50%);
+        }
+    }
+
+    &--inactive {
+        @include opacity(0.4);
+
+    }
+}
+
+.search-bubbles--container  {
+    overflow: hidden;
+
+    & > div.container {padding-left: 62px; padding-right: 62px;}
+    .owl-nav { position: absolute; width: 100%; top: 0; left: 0;}
+
+
+
+
+    .owl-nav .owl-next, .owl-nav .owl-prev {
+        position: absolute;
+        top: 0;
+        width: 600px;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 10px;
+        font-size: 28px;
+        color: $primary-color;
+
+        & img { margin-top: 10px; }
+    }
+
+    .owl-nav .owl-next { left: 100%; text-align: left; }
+    .owl-nav .owl-prev { right: 100%; text-align: right; }
+    .owl-nav .owl-next img {float: left;}
+    .owl-nav .owl-prev img {float: right;}
+    .owl-stage-outer {overflow: initial;}
+}
+
+.search-bubbles--container.level2 {
+    .search-bubble {
+        background-color: transparent;
+        border-color: tint($primary-color, 10%);
+        color: tint($primary-color, 10%);
+
+        &:hover {
+            background-color: tint($primary-color, 10%);
+            border-color: tint($primary-color, 10%);
+            color: #fff;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+$primary-color: #006A96;
+$main-font: 'Roboto';
+$font-size: 14px;
+
+// colors
+$success-color: #5cb85c;
+
+// primary button
+$btn-primary-background-color: $primary-color;
+$btn-primary-border-color: $primary-color;
+$btn-primary-text-color: #fff;
+
+// primary button hover + active
+$btn-primary-hover-background-color: shade($primary-color, 20%);
+$btn-primary-hover-border-color: shade($primary-color, 30%);
+$btn-primary-hover-text-color: #fff;
+
+//footer
+$footer-background-color: #EBEBEA;
